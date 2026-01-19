@@ -23,15 +23,21 @@ $status = $mphpd->status();
 </head>
 
 <body>
-    <button id="pause-button"><i class="fa-solid fa-pause"></i></button> <br>
+    <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
+    <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
+    <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
 
     <?php
         echo $status["state"], "<br> <br>";
 
+        $current_song = $mphpd->player()->current_song();
+        foreach($current_song as $song){
+            echo $song, "<br>";
+        }
+
         foreach($status as $detsomskjer){
             echo $detsomskjer;
         }
-
     ?>
 <script src='scripts/sigma.js'></script>
 </body>
