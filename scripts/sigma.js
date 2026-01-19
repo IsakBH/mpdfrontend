@@ -4,6 +4,8 @@
 // | |  | |  __/| |_| | |  _|| | | (_) | | | | ||  __/ | | | (_| |
 // |_|  |_|_|   |____/  |_|  |_|  \___/|_| |_|\__\___|_| |_|\__,_|
 
+// MphpD dokumentasjon: https://mphpd.org/latest/overview.html
+
 const pausebutton = document.getElementById('pause-button');
 const previousbutton = document.getElementById('previous-button');
 const nextbutton = document.getElementById('next-button');
