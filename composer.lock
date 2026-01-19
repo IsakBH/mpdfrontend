@@ -1,0 +1,55 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1f18bc849b02a034b8113aad41531483",
+    "packages": [
+        {
+            "name": "flofaber/mphpd",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://codeberg.org/FloFaber/MphpD",
+                "reference": "943e7251e8b83c08b8be7e756492c99fbce0f70a"
+            },
+            "require": {
+                "ext-sockets": "*",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "erusev/parsedown": "^1.7",
+                "phpdocumentor/reflection-docblock": "^5.3",
+                "phpunit/phpunit": "9.5.27"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FloFaber\\MphpD\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Florian Faber",
+                    "email": "contact@flofaber.com"
+                }
+            ],
+            "description": "A PHP library for the Music Player Daemon",
+            "time": "2025-09-15T16:46:46+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.9.0"
+}
