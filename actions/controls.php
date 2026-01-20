@@ -18,4 +18,14 @@ if($_GET['action'] === 'next'){
     echo "Gått til neste sang.";
 }
 
+if($_GET['action'] === 'skipback'){
+    $mphpd->player()->previous();
+    echo "Gått til forrige sang.";
+};
+
+if($_GET['action'] === 'skipforwards'){
+    $mphpd->player()->next();
+    echo "Gått til neste sang.";
+}
+
 ?>
