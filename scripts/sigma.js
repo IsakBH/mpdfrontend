@@ -43,6 +43,6 @@ skipbackwardsbutton.addEventListener('click', () => {
 skipforwardsbutton.addEventListener('click', () => {
     console.log("Bro vil gå framover?? :DROOFL::DROOFL:");
     fetch('actions/controls.php?action=skipforwards')
-        .then(response = response.text())
+        .then(response = response.text()
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
-})
+});

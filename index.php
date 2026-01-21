@@ -40,8 +40,13 @@ $status = $mphpd->status();
         foreach($status as $detsomskjer){
             echo $detsomskjer;
         }
+    echo "<br> <br>";
+    print_r(array_keys($current_song));
+    echo "<br>";
+    print_r(array_keys($status));
+    echo "<br>", $status['elapsed'];
     ?>
-<script src='scripts/sigma.js'></script>
+    <script src='scripts/sigma.js'></script>
 </body>
 
 </html>
