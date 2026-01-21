@@ -22,11 +22,15 @@ if($_GET['action'] === 'next'){
 }
 
 if($_GET['action'] === 'skipback'){
-    $mphpd->player()->seek($current_song_position, -5);
+    $pos_after_skip = $current_song_position - 5;
+    $mphpd->player()->seek_cur($pos_after_skip);
     echo "Gått bakover 5 sekunder i sangen.";
 };
 
 if($_GET['action'] === 'skipforwards'){
-    $mphpd->player()->seek($current_song_position, +5);
-    echo "Gått til neste sang.";
+    $pos_after_skip = $current_song_position + 5;
+    $mphpd->player()->seek_cur($pos_after_skip);
+    echo "Gått framover 5 sekunder i sangen..";
 }
+
+// seeking i sanger fungerer nå!
