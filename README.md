@@ -13,7 +13,9 @@ yt-dlp 'link to cool music on youtube' \
 ```
 
 ## How to get synced lyrics from your songs
-This command uses a python program called [syncedlyrics](https://pypi.org/project/syncedlyrics/). You must install this with [pip](https://pypi.org/project/pip/)
+This command uses a python program called [syncedlyrics](https://pypi.org/project/syncedlyrics/).
 ```bash
 for file in *.m4a; do syncedlyrics "${file%.m4a}" -o "${file%.m4a}.lrc"; done
 ```
+
+>Alternatively, you can find the song you want on [LRCLIB](https://lrclib.net) and download the lyrics from there, but that isn't as cool as doing it with a command 😉
