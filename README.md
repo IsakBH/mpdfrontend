@@ -11,3 +11,9 @@ yt-dlp 'link to cool music on youtube' \
 --exec-before-download "ffmpeg -i %(thumbnails.-1.filepath)q -vf crop='ih:ih' _%(thumbnails.-1.filepath)q && mv _%(thumbnails.-1.filepath)q %(thumbnails.-1.filepath)q" \
 --output "%(artist)s - %(title)s.%(ext)s"
 ```
+
+## How to get synced lyrics from your songs
+This command uses a python program called [syncedlyrics](https://pypi.org/project/syncedlyrics/). You must install this with [pip](https://pypi.org/project/pip/)
+```bash
+for file in *.m4a; do syncedlyrics "${file%.m4a}" -o "${file%.m4a}.lrc"; done
+```
