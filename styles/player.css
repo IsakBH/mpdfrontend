@@ -1,0 +1,12 @@
+html {
+    background-color: #148867;
+}
+
+.albumart {
+    border-radius: 20px;
+}
+
+#playeralbumart {
+    width: 500px;
+    height: auto;
+}
