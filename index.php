@@ -46,7 +46,7 @@ $status = $mphpd->status();
         print_r(array_keys($status));
         echo "<br>", $status['elapsed'];
     ?>
-    <script src='scripts/sigma.js'></script>
+    <script src='scripts/player_controls.js'></script>
 </body>
 
 </html>
