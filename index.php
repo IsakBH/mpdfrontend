@@ -6,6 +6,7 @@ $status = $mphpd->status();
 
 <!doctype html>
 <html lang="en">
+
 <head>
     <title> Isak B. Henriksen </title>
     <link rel="icon" href="../Pictures/Tux.svg.png">
@@ -30,21 +31,33 @@ $status = $mphpd->status();
     <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
 
     <?php
-        echo $status["state"], "<br> <br>";
+    $current_song = $mphpd->player()->current_song();
+    $uri = $current_song['file'];
 
-        $current_song = $mphpd->player()->current_song();
-        foreach($current_song as $song){
-            echo $song, "<br>";
-        }
+    $binaryart = $mphpd->db()->albumart($uri);
 
-        foreach($status as $detsomskjer){
-            echo $detsomskjer;
-        }
-        echo "<br> <br>";
-        print_r(array_keys($current_song));
-        echo "<br>";
-        print_r(array_keys($status));
-        echo "<br>", $status['elapsed'];
+    if ($binaryart) {
+        $base64 = base64_encode($binaryart);
+        echo '<img src="data:image/jpeg;base64,' . $base64 . '" alt="Album Art" />';
+    }
+    else {
+        echo '<img src="assets/placeholder.png" <br>';
+    }
+
+    echo $status["state"], "<br> <br>";
+
+    foreach ($current_song as $song) {
+        echo $song, "<br>";
+    }
+
+    foreach ($status as $detsomskjer) {
+        echo $detsomskjer;
+    }
+    echo "<br> <br>";
+    print_r(array_keys($current_song));
+    echo "<br>";
+    print_r(array_keys($status));
+    echo "<br>", $status['elapsed'];
     ?>
     <script src='scripts/player_controls.js'></script>
 </body>
