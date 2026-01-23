@@ -34,11 +34,11 @@ $status = $mphpd->status();
     $current_song = $mphpd->player()->current_song();
     $uri = $current_song['file'];
 
-    $binaryart = $mphpd->db()->albumart($uri);
+    $binaryart =$binaryart = $mphpd->db()->read_picture($uri);
 
     if ($binaryart) {
         $base64 = base64_encode($binaryart);
-        echo '<img src="data:image/jpeg;base64,' . $base64 . '" alt="Album Art" />';
+        echo '<img class="albumart" id="playeralbumart" src="data:image/jpeg;base64,' . $base64 . '" alt="Album Art" />';
     }
     else {
         echo '<img src="assets/placeholder.png" <br>';
