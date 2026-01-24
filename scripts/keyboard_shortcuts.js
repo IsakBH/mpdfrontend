@@ -11,6 +11,18 @@ window.onkeydown = function (e) {
         skipforwardsbutton.click();
     }
 
+    // going to the previous song
+    if (e.key === "k") {
+        e.preventDefault();
+        previousbutton.click();
+    }
+
+    // going to the next song
+    if (e.key === "j") {
+        e.preventDefault();
+        nextbutton.click();
+    }
+
     // pause
     if (e.key === " ") {
         e.preventDefault();
