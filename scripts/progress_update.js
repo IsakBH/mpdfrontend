@@ -1,4 +1,5 @@
 const progress_bar = document.getElementById('progress-bar');
+const progress_container = document.querySelector('.progress-container');
 
 async function update_progress_bar() {
     const response = await fetch('actions/song_status.php');
@@ -10,3 +11,16 @@ async function update_progress_bar() {
 
 window.onload = update_progress_bar();
 setInterval(update_progress_bar, 1000);
+
+async function skip_to_percentage(percentage) {
+    fetch('actions/controls.php?action=seektopercent&percent=' + percentage)
+        .then(response => response.text())
+        .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
+    update_progress_bar();
+};
+
+progress_container.addEventListener('click', function (e) {
+    const percentage = Math.floor((e.offsetX / progress_container.offsetWidth) * 100);
+    console.log(percentage);
+    skip_to_percentage(percentage);
+})

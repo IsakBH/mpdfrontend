@@ -33,4 +33,14 @@ if($_GET['action'] === 'skipforwards'){
     echo "Gått framover 5 sekunder i sangen..";
 }
 
+if($_GET['action'] === 'seektopercent'){
+    $percentage = htmlspecialchars($_GET['percent']);
+
+    $skip_to_timestamp = ($percentage * $mpd_status['duration']) / 100;
+
+    $mphpd->player()->seek_cur($skip_to_timestamp);
+
+    echo "hei $percentage + duration" . $mpd_status['duration'] . "+ will skip to $skip_to_timestamp";
+}
+
 // seeking i sanger fungerer nå!
