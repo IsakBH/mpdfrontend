@@ -1,5 +1,18 @@
 html {
-    background-color: #148867;
+    background-color: #0A0A0A;
+    color: #FAFAFA;
+}
+
+button {
+    background-color: #15181A;
+    color: #FAFAFA;
+    border: 1px solid #36393D;
+    border-radius: 10px;
+    padding-inline: 4px;
+    padding-block: 0.25rem;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .albumart {
