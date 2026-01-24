@@ -8,4 +8,5 @@ async function update_progress_bar() {
     progress_bar.style.width = data.percent + '%';
 }
 
+window.onload = update_progress_bar();
 setInterval(update_progress_bar, 1000);
