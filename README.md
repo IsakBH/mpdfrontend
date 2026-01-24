@@ -1,6 +1,16 @@
 > [!WARNING]
 > This project is mostly made for fun, and it will probably never be very good or secure
 
+
+## Player shortcuts
+| Keyboard shortcut | Action/Description |
+|---|---|
+| <kbd>Space</kbd> | Pauses the currently playing song. |
+| <kbd>&leftarrow;</kbd> | Skips/seeks 5 sekonds backwards in the currently playing song. |
+| <kbd>&rightarrow;</kbd> | Skips/seeks 5 seconds forwards in the currently playing song. |
+| <kbd>k</kbd> | Plays the previous song in the queue. |
+| <kbd>j</kbd> | Plays the next song in the queue. |
+
 ## YT-DLP command to download music in the highest quality while extracting all metadata
 ```bash
 yt-dlp 'link to cool music on youtube' \
