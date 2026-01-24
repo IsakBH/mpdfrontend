@@ -61,6 +61,7 @@ $status = $mphpd->status();
     echo "<br>", $status['elapsed'];
     ?>
     <script src='scripts/player_controls.js'></script>
+    <script src='scripts/keyboard_shortcuts.js'></script>
 </body>
 
 </html>
