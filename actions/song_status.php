@@ -4,4 +4,12 @@ require '../connection.php';
 
 $status = $mphpd->status();
 
-echo json_encode($status);
+// get the time elapsed and song duration from the mphpd status
+$elapsed = $status['elapsed'];
+$duration = $status['duration'];
+
+echo json_encode([
+    'elapsed' => $elapsed,
+    'duration' => $duration,
+    'percent' => ($duration > 0) ? ($elapsed / $duration) * 100 : 0
+]);

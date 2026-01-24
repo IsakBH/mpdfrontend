@@ -25,6 +25,20 @@ $status = $mphpd->status();
 </head>
 
 <body>
+    <?php
+    $current_song = $mphpd->player()->current_song();
+    $uri = $current_song['file'];
+
+    $binaryart = $binaryart = $mphpd->db()->read_picture($uri);
+
+    if ($binaryart) {
+        $base64 = base64_encode($binaryart);
+        echo '<img class="albumart" id="playeralbumart" src="data:image/jpeg;base64,' . $base64 . '" alt="Album Art" />';
+    } else {
+        echo '<img src="assets/placeholder.png" <br>';
+    }
+    ?>
+    <br>
     <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
     <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
     <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
@@ -32,18 +46,7 @@ $status = $mphpd->status();
     <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
 
     <?php
-    $current_song = $mphpd->player()->current_song();
-    $uri = $current_song['file'];
 
-    $binaryart =$binaryart = $mphpd->db()->read_picture($uri);
-
-    if ($binaryart) {
-        $base64 = base64_encode($binaryart);
-        echo '<img class="albumart" id="playeralbumart" src="data:image/jpeg;base64,' . $base64 . '" alt="Album Art" />';
-    }
-    else {
-        echo '<img src="assets/placeholder.png" <br>';
-    }
 
     echo $status["state"], "<br> <br>";
 
@@ -62,6 +65,7 @@ $status = $mphpd->status();
     ?>
     <script src='scripts/player_controls.js'></script>
     <script src='scripts/keyboard_shortcuts.js'></script>
+    <script src='scripts/progress_update.js'></script>
 </body>
 
 </html>
