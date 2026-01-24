@@ -13,7 +13,7 @@ const skipbackwardsbutton = document.getElementById('skip-backwards-button');
 const skipforwardsbutton = document.getElementById('skip-forwards-button');
 const playeralbumart = document.getElementById('playeralbumart');
 
-// pausing
+// pausing the current song via clicking the pause button
 pausebutton.addEventListener('click', () => {
     console.log("Bro trykket på pause lol");
     fetch('actions/controls.php?action=pause')
@@ -21,6 +21,7 @@ pausebutton.addEventListener('click', () => {
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
 });
 
+// pausing the current song via clicking the album art
 playeralbumart.addEventListener('click', () => {
     console.log("Bro trykket på pause lol");
     fetch('actions/controls.php?action=pause')
