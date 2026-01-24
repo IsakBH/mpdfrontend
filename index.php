@@ -10,9 +10,9 @@ $status = $mphpd->status();
 <head>
     <title> Isak B. Henriksen </title>
     <link rel="icon" href="../Pictures/Tux.svg.png">
-    <script src="../Javascript/toggle.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/player.css">
+    <link rel="stylesheet" href="styles/progress_bar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <meta charset="utf-8">
 
@@ -39,6 +39,11 @@ $status = $mphpd->status();
     }
     ?>
     <br>
+    <div class="progress-container">
+        <div id="progress-bar"></div>
+    </div>
+    <div id="time-display">0:00 / 0:00</div>
+
     <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
     <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
     <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
