@@ -11,5 +11,6 @@
 #progress-bar {
      width: 0%;
      background: #FFFFFF;
+     border-radius: 2px;
      height: 100%;
 }

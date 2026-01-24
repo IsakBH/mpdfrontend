@@ -51,6 +51,7 @@ skipbackwardsbutton.addEventListener('click', () => {
     fetch('actions/controls.php?action=skipback')
         .then(response => response.text())
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
+    update_progress_bar();
 });
 
 // skipping/seeking forwards in the current song
@@ -59,4 +60,5 @@ skipforwardsbutton.addEventListener('click', () => {
     fetch('actions/controls.php?action=skipforwards')
         .then(response => response.text()
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data)));
+    update_progress_bar();
 });
