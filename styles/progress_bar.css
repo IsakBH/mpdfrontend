@@ -6,6 +6,15 @@
     margin: 0;
     padding: 0;
     height: 4px;
+    &:hover {
+        cursor: pointer;
+        height: 20px;
+        border-radius: 10px;
+        #progress-bar {
+            background-color: #148867;
+            border-radius: 10px;
+        }
+    }
 }
 
 #progress-bar {

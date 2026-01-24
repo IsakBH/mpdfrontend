@@ -9,7 +9,7 @@ button {
     border: 1px solid #36393D;
     border-radius: 10px;
     padding-inline: 4px;
-    padding-block: 0.25rem;
+    padding: 0.25rem; /* kanskje padding-block kan være bedre? */
     &:hover {
         cursor: pointer;
     }
@@ -22,4 +22,11 @@ button {
 #playeralbumart {
     width: 500px;
     height: auto;
+    transition: 0.09s;
+    &:hover {
+        filter: brightness(80%);
+    }
+    &:active {
+        filter: brightness(60%);
+    }
 }
