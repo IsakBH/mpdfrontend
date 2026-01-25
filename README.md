@@ -12,6 +12,7 @@
 | <kbd>&uparrow;</kbd> | Increase the volume by 5%. |
 | <kbd>k</kbd> | Plays the previous song in the queue. |
 | <kbd>j</kbd> | Plays the next song in the queue. |
+| <kbd>0-9</kbd> | Skips/seeks to a specific point in the currently playing song. E.g <kbd>4</kbd> for 40% through or <kbd>0</kbd> to go to the start. |
 
 ## YT-DLP command to download music in the highest quality while extracting all metadata
 ```bash
