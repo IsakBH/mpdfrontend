@@ -38,11 +38,12 @@ $status = $mphpd->status();
         echo '<img src="assets/placeholder.png" <br>';
     }
     ?>
-    <br>
+    <br> <br>
     <div class="progress-container">
         <div id="progress-bar"></div>
     </div>
     <div id="time-display">0:00 / 0:00</div>
+    <br>
 
     <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
     <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
