@@ -36,6 +36,10 @@ window.onkeydown = function (e) {
         pausebutton.click();
     }
 
+    if (e.ctrlKey || e.altKey) {
+        return;
+    }
+
     if (e.key === "0") {
         e.preventDefault();
         skip_to_percentage(0);
@@ -85,4 +89,5 @@ window.onkeydown = function (e) {
         e.preventDefault();
         skip_to_percentage(90);
     }
+
 }
