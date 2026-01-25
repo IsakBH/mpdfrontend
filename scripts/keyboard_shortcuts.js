@@ -18,6 +18,22 @@ window.onkeydown = function (e) {
         skipforwardsbutton.click();
     }
 
+    // volume down
+    if (e.key === "ArrowDown") {
+        e.preventDefault();
+        fetch("actions/controls.php?action=volumedown")
+            .then(response => response.text())
+            .then(data => console.log("Heisann! Ts er det serveren sier: " + data))
+    }
+
+    // volume up
+    if (e.key === "ArrowUp") {
+        e.preventDefault();
+        fetch("actions/controls.php?action=volumeup")
+            .then(response => response.text())
+            .then(data => console.log("Heisann! Ts er det serveren sier: " + data))
+    }
+
     // going to the previous song
     if (e.key === "k") {
         e.preventDefault();

@@ -43,4 +43,18 @@ if($_GET['action'] === 'seektopercent'){
     echo "hei $percentage + duration" . $mpd_status['duration'] . "+ will skip to $skip_to_timestamp";
 }
 
+if($_GET['action'] === 'volumedown'){
+    $volume = $mphpd->player()->volume();
+    $volume -= 5;
+    $mphpd->player()->volume($volume);
+    echo "Volum er skrudd ned med 5%. Volum er nå $volume.";
+}
+
+if($_GET['action'] === 'volumeup'){
+    $volume = $mphpd->player()->volume();
+    $volume += 5;
+    $mphpd->player()->volume($volume);
+    echo "Volum er skrudd ned med 5%. Volum er nå $volume.";
+}
+
 // seeking i sanger fungerer nå!
