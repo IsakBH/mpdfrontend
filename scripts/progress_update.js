@@ -8,6 +8,7 @@ async function update_progress_bar(percentage) {
         const response = await fetch('actions/song_status.php');
         const data = await response.json();
         console.log(data['elapsed'])
+        progress_bar.style.width = data.percent + '%';
     }
 }
 
