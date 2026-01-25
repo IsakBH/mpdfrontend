@@ -8,6 +8,8 @@
 | <kbd>Space</kbd> | Pauses the currently playing song. |
 | <kbd>&leftarrow;</kbd> | Skips/seeks 5 sekonds backwards in the currently playing song. |
 | <kbd>&rightarrow;</kbd> | Skips/seeks 5 seconds forwards in the currently playing song. |
+| <kbd>&downarrow;</kbd> | Decreases the volume by 5%. |
+| <kbd>&uparrow;</kbd> | Increase the volume by 5%. |
 | <kbd>k</kbd> | Plays the previous song in the queue. |
 | <kbd>j</kbd> | Plays the next song in the queue. |
 
