@@ -10,12 +10,14 @@ window.onkeydown = function (e) {
     if (e.key === "ArrowLeft") {
         e.preventDefault();
         skipbackwardsbutton.click();
+        update_progress_bar();
     }
 
     // skip/seek forwards
     if (e.key === "ArrowRight") {
         e.preventDefault();
         skipforwardsbutton.click();
+        update_progress_bar();
     }
 
     // volume down
@@ -59,51 +61,61 @@ window.onkeydown = function (e) {
     if (e.key === "0") {
         e.preventDefault();
         skip_to_percentage(0);
+        update_progress_bar();
     }
 
     if (e.key === "1") {
         e.preventDefault();
         skip_to_percentage(10);
+        update_progress_bar();
     }
 
     if (e.key === "2") {
         e.preventDefault();
         skip_to_percentage(20);
+        update_progress_bar();
     }
 
     if (e.key === "3") {
         e.preventDefault();
         skip_to_percentage(30);
+        update_progress_bar();
     }
 
     if (e.key === "4") {
         e.preventDefault();
         skip_to_percentage(40);
+        update_progress_bar();
     }
 
     if (e.key === "5") {
         e.preventDefault();
         skip_to_percentage(50);
+        update_progress_bar();
     }
 
     if (e.key === "6") {
         e.preventDefault();
         skip_to_percentage(60);
+        update_progress_bar();
     }
 
     if (e.key === "7") {
         e.preventDefault();
         skip_to_percentage(70);
+        update_progress_bar();
     }
 
     if (e.key === "8") {
         e.preventDefault();
         skip_to_percentage(80);
+        update_progress_bar();
     }
 
     if (e.key === "9") {
         e.preventDefault();
         skip_to_percentage(90);
+        update_progress_bar();
     }
 
 }
