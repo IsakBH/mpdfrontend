@@ -14,6 +14,12 @@ html {
     border-right: 1px solid grey;
 }
 
+#player-interact-container {
+    height: 100%;
+    width: 500px;
+    margin: 0 auto;
+}
+
 button {
     background-color: #15181A;
     color: #FAFAFA;
