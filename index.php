@@ -8,7 +8,7 @@ $status = $mphpd->status();
 <html lang="en">
 
 <head>
-    <title> Isak B. Henriksen </title>
+    <title> MPD Frontend </title>
     <link rel="icon" href="../Pictures/Tux.svg.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/player.css">
