@@ -36,5 +36,6 @@ This command uses a python program called [syncedlyrics](https://pypi.org/projec
 ```bash
 for file in *.m4a; do syncedlyrics "${file%.m4a}" -o "${file%.m4a}.lrc"; done
 ```
+Alternatively, you can find the song you want on [LRCLIB](https://lrclib.net) and download the lyrics from there, but that isn't as cool as doing it with a command 😉
 
->Alternatively, you can find the song you want on [LRCLIB](https://lrclib.net) and download the lyrics from there, but that isn't as cool as doing it with a command 😉
+> Handwritten with ❤️ and lots of Urge
