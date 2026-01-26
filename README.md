@@ -1,6 +1,12 @@
 > [!WARNING]
 > This project is mostly made for fun, and it will probably never be very good or secure
 
+## Dependencies/Prerequisites
+* A webserver with PHP support enabled (like Apache or Nginx)
+* PHP, of course
+* Preconfigured MPD
+  * As of right now, this project connects to `127.0.0.1` at port `6767`. However, you can change this in [this file](connection.php). Support for adding your own server will likely be added in the future.
+
 
 ## Player shortcuts
 | Keyboard shortcut | Action/Description |
