@@ -31,6 +31,7 @@ $status = $mphpd->status();
             <?php
             $current_song = $mphpd->player()->current_song();
             $uri = $current_song['file'];
+            $current_song_album = $current_song['album'] ?? "Unknown album";
 
             $binaryart = $binaryart = $mphpd->db()->read_picture($uri);
             if ($binaryart) {
@@ -40,7 +41,10 @@ $status = $mphpd->status();
                 echo '<img src="assets/placeholder.png" <br>';
             }
             ?>
-            <br> <br>
+            <div id="song-information">
+                <p id="song-title"><?php echo $current_song['title']; ?></p>
+                <p id="song-artist"><?php echo $current_song['artist'] . " ––– " . $current_song_album ?></p>
+            </div>
             <div class="progress-container">
                 <div id="progress-bar"></div>
             </div>
