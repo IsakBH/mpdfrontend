@@ -1,15 +1,26 @@
 const progress_bar = document.getElementById('progress-bar');
 const progress_container = document.querySelector('.progress-container');
+const time_display = document.getElementById('time-display');
 
 async function update_progress_bar(percentage) {
     if (percentage) {
         progress_bar.style.width = percentage + '%';
+        const response = await fetch('actions/song_status.php');
+        const data = await response.json();
+        time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`
     } else {
         const response = await fetch('actions/song_status.php');
         const data = await response.json();
-        console.log(data['elapsed'])
+        console.log(`${format_time(data.elapsed)} / ${format_time(data.duration)}`);
         progress_bar.style.width = data.percent + '%';
+        time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`;
     }
+}
+
+function format_time(seconds) {
+    const min = Math.floor(seconds / 60);
+    const sec = Math.floor(seconds % 60).toString().padStart(2, '0');
+    return `${min}:${sec}`;
 }
 
 window.onload = update_progress_bar();
