@@ -9,9 +9,46 @@ button {
     border: 1px solid #36393D;
     border-radius: 10px;
     padding-inline: 4px;
-    padding: 0.25rem; /* kanskje padding-block kan være bedre? */
+    padding: 0.25rem;
     &:hover {
         cursor: pointer;
+    }
+}
+
+#pause-button {
+    background-color: #ffffff;
+    color: #15181a;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    &:hover {
+        background-color: #4D4D4D;
+    }
+}
+
+#skip-backwards-button, #skip-forwards-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    transition: background-color 0.1s ease-out;
+    &:hover {
+        background-color: #4d4d4d;
+    }
+    &:active {
+        background-color: #5F5F5F;
+    }
+}
+
+#previous-button, #next-button {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    transition: background-color 0.1s ease-out;
+    &:hover {
+        background-color: #4d4d4d;
+    }
+    &:active {
+        background-color: #5f5f5f;
     }
 }
 
