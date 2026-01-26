@@ -14,8 +14,13 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/player.css">
     <link rel="stylesheet" href="styles/progress_bar.css">
     <link rel="stylesheet" href="styles/album_art.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <meta charset="utf-8">
+
+    <!-- Fonter og ikoner -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
     <!-- Open Graph meta-tagger -->
     <meta property="og:title" content="Isak Henriksen">
