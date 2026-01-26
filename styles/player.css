@@ -30,6 +30,10 @@ html {
 #song-title {
     font-weight: bold;
     font-size: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 500px;
 }
 
 #song-artist {
