@@ -1,9 +1,9 @@
 .progress-container {
-    width: 25%;
+    width: 50%;
     background: #4D4D4D;
     border-radius: 2px;
     border: 0;
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     height: 4px;
     transition: 0.2s;

@@ -1,0 +1,15 @@
+.albumart {
+    border-radius: 20px;
+}
+
+#playeralbumart {
+    width: 500px;
+    height: auto;
+    transition: 0.09s;
+    &:hover {
+        filter: brightness(80%);
+    }
+    &:active {
+        filter: brightness(60%);
+    }
+}
