@@ -3,9 +3,10 @@
 }
 
 #playeralbumart {
+    margin-top: 10px;
     width: 500px;
     height: auto;
-    transition: 0.09s;
+    transition: 0.05s;
     &:hover {
         filter: brightness(80%);
     }
