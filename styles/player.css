@@ -1,7 +1,11 @@
 html {
+    font-family: "Noto Sans";
+}
+
+body {
+    margin: 0;
     background-color: #0A0A0A;
     color: #FAFAFA;
-    font-family: "Noto Sans";
 }
 
 #main-container {
