@@ -6,13 +6,14 @@ html {
 
 #main-container {
     height: 100%;
-    width: 60%;
+    width: 40%;
     margin: 0px auto;
     justify-content: center;
     text-align: center;
-    /*padding: 50px 30px;*/
+    padding: 50px 30px;
     border-left: 1px solid grey;
     border-right: 1px solid grey;
+    background-color: #000000;
 }
 
 #player-interact-container {
