@@ -82,5 +82,12 @@ repeatbutton.addEventListener('click', () => {
     console.log("ROFLROFLROFLROFLROFLROFLROFLROFLROFL bro har lyst til å toggle repeat");
     fetch('actions/controls.php?action=repeat')
         .then(response => response.text()
-        .then(data => console.log("Heisann! Ts er det severen sier: " + data)));
+        .then(data => {
+            console.log("Heisann! Ts er det severen sier: " + data)
+            if (data === "1") {
+                repeatbutton.innerHTML = "<i class=\"fa-solid fa-repeat\"></i>";
+            } else {
+                repeatbutton.innerHTML = "<i class=\"fa-solid fa-arrows-turn-right\"></i>";
+            }
+        }));
 });

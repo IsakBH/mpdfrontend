@@ -58,8 +58,8 @@ if($_GET['action'] === 'volumeup'){
 }
 
 if($_GET['action'] === "repeat"){
-    echo $mpd_status['repeat'];
     $new_repeat_status = !$mpd_status['repeat'];
+    echo $new_repeat_status;
     $mphpd->player()->repeat($new_repeat_status);
 }
 
