@@ -18,7 +18,14 @@ pausebutton.addEventListener('click', () => {
     console.log("Bro trykket på pause lol");
     fetch('actions/controls.php?action=pause')
         .then(response => response.text())
-        .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
+        .then(data => {
+            console.log("Heisann! Ts er det serveren sier: " + data)
+            if (data === "pause") {
+                pausebutton.innerHTML = "<i class=\"fa-solid fa-play\"></i>";
+            } else {
+                pausebutton.innerHTML = "<i class=\"fa-solid fa-pause\">";
+            }
+        });
 });
 
 // pausing the current song via clicking the album art
@@ -26,7 +33,14 @@ playeralbumart.addEventListener('click', () => {
     console.log("Bro trykket på pause lol");
     fetch('actions/controls.php?action=pause')
         .then(response => response.text())
-        .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
+        .then(data => {
+            console.log("Heisann! Ts er det serveren sier: " + data)
+            if (data === "pause") {
+                pausebutton.innerHTML = "<i class=\"fa-solid fa-play\"></i>";
+            } else {
+                pausebutton.innerHTML = "<i class=\"fa-solid fa-pause\"></i>";
+            }
+        });
 });
 
 // going to the previous song in the queue

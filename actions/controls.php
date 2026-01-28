@@ -8,7 +8,7 @@ $current_song_position = $mpd_status['elapsed'];
 if($_GET['action'] === 'pause'){
     $mphpd->player()->pause();
     $playing_status = $mphpd->status(["state"]);
-    echo "Pause er toggled. Status er nå: $playing_status";
+    echo $playing_status;
 };
 
 if($_GET['action'] === 'previous'){
