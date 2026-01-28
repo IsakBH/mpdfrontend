@@ -69,7 +69,7 @@ $status = $mphpd->status();
                 <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                 <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
                 <button id="volume-button"><i class="fa-solid fa-volume-high"></i></button>
-                <button id="repeat-button"><i class="fa-solid fa-repeat"></i></button>
+                <button id="repeat-button"><?php echo $status['repeat'] === 1 ? "<i class=\"fa-solid fa-arrows-turn-right\"></i>" : "<i class=\"fa-solid fa-repeat\"></i>"; ?></button>
             </div>
         </div>
     </div>
