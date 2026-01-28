@@ -12,6 +12,7 @@ const nextbutton = document.getElementById('next-button');
 const skipbackwardsbutton = document.getElementById('skip-backwards-button');
 const skipforwardsbutton = document.getElementById('skip-forwards-button');
 const playeralbumart = document.getElementById('playeralbumart');
+const repeatbutton = document.getElementById('repeat-button');
 
 // pausing the current song via clicking the pause button
 pausebutton.addEventListener('click', () => {
@@ -75,4 +76,11 @@ skipforwardsbutton.addEventListener('click', () => {
         .then(response => response.text()
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data)));
     update_progress_bar();
+});
+
+repeatbutton.addEventListener('click', () => {
+    console.log("ROFLROFLROFLROFLROFLROFLROFLROFLROFL bro har lyst til å toggle repeat");
+    fetch('actions/controls.php?action=repeat')
+        .then(response => response.text()
+        .then(data => console.log("Heisann! Ts er det severen sier: " + data)));
 });

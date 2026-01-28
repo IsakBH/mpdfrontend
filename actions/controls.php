@@ -57,4 +57,10 @@ if($_GET['action'] === 'volumeup'){
     echo "Volum er skrudd ned med 5%. Volum er nå $volume.";
 }
 
+if($_GET['action'] === "repeat"){
+    echo $mpd_status['repeat'];
+    $new_repeat_status = !$mpd_status['repeat'];
+    $mphpd->player()->repeat($new_repeat_status);
+}
+
 // seeking i sanger fungerer nå!
