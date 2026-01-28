@@ -38,9 +38,12 @@ $status = $mphpd->status();
         <div id="player-interact-container">
             <?php
             $current_song = $mphpd->player()->current_song();
-            $uri = $current_song['file'];
-            $current_song_album = $current_song['album'] ?? "Unknown album";
-
+            if($current_song){
+                $uri = $current_song['file'];
+                $current_song_album = $current_song['album'] ?? "Unknown album";
+            } else {
+                echo "It seems you're not playing anything.";
+            }
             $binaryart = $binaryart = $mphpd->db()->read_picture($uri);
             if ($binaryart) {
                 $base64 = base64_encode($binaryart);
