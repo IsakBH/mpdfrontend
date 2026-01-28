@@ -30,8 +30,9 @@ body {
 
 #song-information {
     text-align: left;
-    margin: 0;
+    margin: 1em 0 1em 0;
     padding: 0;
+    align-content: center;
 }
 
 #song-title {
@@ -41,10 +42,12 @@ body {
     white-space: nowrap;
     overflow: hidden;
     max-width: 500px;
+    margin: 0;
 }
 
 #song-artist {
     color: #ffffffb3;
+    margin: 0;
 }
 
 button {
