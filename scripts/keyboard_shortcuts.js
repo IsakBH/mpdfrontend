@@ -1,10 +1,3 @@
-async function skip_to_percentage(percentage) {
-    fetch('actions/controls.php?action=seektopercent&percent=' + percentage)
-        .then(response => response.text())
-        .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
-    update_progress_bar();
-};
-
 window.onkeydown = function (e) {
     // skip/seek backwards
     if (e.key === "ArrowLeft") {
