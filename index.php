@@ -65,7 +65,7 @@ $status = $mphpd->status();
             <div id="player-button-div">
                 <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
                 <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-                <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
+                <button id="pause-button"><?php echo $status['state'] === "play" ? "<i class=\"fa-solid fa-pause\">" : "<i class=\"fa-solid fa-play\">"; ?></i></button>
                 <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                 <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
                 <button id="volume-button"><i class="fa-solid fa-volume-high"></i></button>
