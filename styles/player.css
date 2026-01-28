@@ -86,7 +86,7 @@ button {
     }
 }
 
-#previous-button, #next-button {
+#previous-button, #next-button, #volume-button, #repeat-button {
     background: none;
     border: none;
     font-size: 1rem;
@@ -97,4 +97,20 @@ button {
     &:active {
         background-color: #5f5f5f;
     }
+}
+
+#volume-button {
+    font-size: 1.2rem;
+    float: right;
+}
+
+#repeat-button {
+    font-size: 1.2rem;
+    float: left;
+}
+
+#player-buton-div {
+    width: 100%;
+    align-items: center;
+    display: flex;
 }

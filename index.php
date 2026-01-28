@@ -59,11 +59,15 @@ $status = $mphpd->status();
             <div id="time-display">0:00 / 0:00</div>
             <br>
 
-            <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
-            <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
-            <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
-            <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
-            <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
+            <div id="player-button-div">
+                <button id="previous-button"><i class="fa-solid fa-backward-step"></i></button>
+                <button id="skip-backwards-button"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+                <button id="pause-button"><i class="fa-solid fa-pause"></i></button>
+                <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+                <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
+                <button id="volume-button"><i class="fa-solid fa-volume-high"></i></button>
+                <button id="repeat-button"><i class="fa-solid fa-repeat"></i></button>
+            </div>
         </div>
     </div>
     <?php
