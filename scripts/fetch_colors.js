@@ -23,8 +23,12 @@ function getColor(image) {
 }
 
 function applyColor(color) {
-    console.log(`Applying box-shadow to #playeralbumart. Color: ${color}`);
-    playeralbumart.style.boxShadow = `0px 0px 10px ${color}`;
+    console.log(`Applying colours to #playeralbumart. Colour: ${color}`);
+    playeralbumart.style.boxShadow = `0px 0px 40px ${color}`;
+
+    console.log(`Applying colours to the progress bar. Colour: ${color}`);
+    progress_bar.style.background = `${color}`;
+    progress_bar.style.boxShadow = `0 0 15px 2px ${color}CC`
 }
 
 let albumart_color = getColor(playeralbumart);
