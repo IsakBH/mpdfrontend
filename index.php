@@ -92,6 +92,7 @@ $status = $mphpd->status();
     <script src='scripts/player_controls.js'></script>
     <script src='scripts/keyboard_shortcuts.js'></script>
     <script src='scripts/progress_update.js'></script>
+    <script type='module' src='scripts/fetch_colors.js'></script>
 </body>
 
 </html>
