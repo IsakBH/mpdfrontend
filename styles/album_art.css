@@ -7,6 +7,7 @@
     width: 500px;
     height: auto;
     transition: 0.05s;
+    transition: box-shadow 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     &:hover {
         filter: brightness(80%);
     }
