@@ -22,7 +22,10 @@ function getColor(image) {
     }
 }
 
-// let albumart_color = getColor(playeralbumart);
-// console.log(albumart_color);
+function applyColor(color) {
+    console.log(`Applying box-shadow to #playeralbumart. Color: ${color}`);
+    playeralbumart.style.boxShadow = `0px 0px 10px ${color}`;
+}
 
-window.onload = getColor(playeralbumart);
+let albumart_color = getColor(playeralbumart);
+applyColor(albumart_color);
