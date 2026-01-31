@@ -79,10 +79,22 @@ $status = $mphpd->status();
         <?php
         $queue = $mphpd->queue()->get();
         foreach ($queue as $queue_song) {
-            $id = $queue_song['id'];
+            // info about the songs
+            $uri = $queue_song['file'];
             $title = $queue_song['title'];
             $artist = $queue_song['artist'];
+            /*$binaryart = $mphpd->db()->read_picture($uri);
+            if ($binaryart) {
+                $base64 = base64_encode($binaryart);
+                $albumart = "<img class=\"albumart\" src=\"data:image/jpeg;base64,$base64\" alt=\"Album Art\" />";
+            } else {
+                $albumart = '<img src="assets/placeholder.png" <br>';
+                }*/
+
+            $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
+
             echo "<li> <div class=\"queue-song\" onclick=\"play_song(({$id})\">
+                <img class=\"albumart\" src=\"$albumart_url\" alt=\"Album art\">
                 <span class='queue-song-title'>{$title}</span> <br>
                 <span class='queue-song-artist'>{$artist}</span>
             </div>
@@ -91,6 +103,7 @@ $status = $mphpd->status();
                     <i class=\"fa-solid fa-play\"></i>
                 </button>
             </div> </li>";
+            //print_r(array_keys($queue_song));
         }
         ?>
     </div>

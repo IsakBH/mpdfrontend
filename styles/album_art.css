@@ -1,5 +1,7 @@
 .albumart {
-    border-radius: 20px;
+    border-radius: 8px;
+    height: 50px;
+    display: flex;
 }
 
 #playeralbumart {
