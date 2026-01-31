@@ -1,6 +1,7 @@
 const progress_bar = document.getElementById('progress-bar');
 const progress_container = document.querySelector('.progress-container');
 const time_display = document.getElementById('time-display');
+let is_dragging = false;
 
 async function update_progress_bar(percentage) {
     if (percentage) {
@@ -37,4 +38,17 @@ progress_container.addEventListener('mousedown', function (e) {
     const percentage = Math.floor((e.offsetX / progress_container.offsetWidth) * 100);
     console.log(percentage);
     skip_to_percentage(percentage);
+    is_dragging = true;
+})
+
+progress_container.addEventListener('mousemove', function (e) {
+    const percentage = Math.floor((e.offsetX / progress_container.offsetWidth) * 100);
+    console.log(percentage);
+    if (is_dragging === true) {
+        skip_to_percentage(percentage);
+    }
+})
+
+progress_container.addEventListener('mouseup', function (e) {
+    is_dragging = false;
 })
