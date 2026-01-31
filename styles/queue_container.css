@@ -53,4 +53,5 @@
 
 .queue-song-data {
     display: flex;
+    align-items: center;
 }
