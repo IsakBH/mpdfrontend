@@ -79,9 +79,7 @@ $status = $mphpd->status();
         <?php
         $queue = $mphpd->queue()->get();
         foreach ($queue as $queue_song) {
-            foreach ($queue_song as $song) {
-                echo $song;
-            }
+            echo $queue_song['title'] . "<br>" . $queue_song['artist'] . "<br> <br>";
         }
         ?>
     </div>
