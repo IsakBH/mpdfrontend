@@ -18,6 +18,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/player.css">
     <link rel="stylesheet" href="styles/progress_bar.css">
     <link rel="stylesheet" href="styles/album_art.css">
+    <link rel="stylesheet" href="styles/queue_container.css">
 
     <!-- Fonter og ikoner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -73,6 +74,11 @@ $status = $mphpd->status();
             </div>
         </div>
     </div>
+
+    <div id="queue-selector-container">
+        <p>hei</p>
+    </div>
+
     <?php
     echo $status["state"], "<br> <br>";
 
