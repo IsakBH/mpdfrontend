@@ -39,7 +39,7 @@ $status = $mphpd->status();
         <div id="player-interact-container">
             <?php
             $current_song = $mphpd->player()->current_song();
-            if($current_song){
+            if ($current_song) {
                 $uri = $current_song['file'];
                 $current_song_album = $current_song['album'] ?? "Unknown album";
             } else {
@@ -76,7 +76,14 @@ $status = $mphpd->status();
     </div>
 
     <div id="queue-selector-container">
-        <p>hei</p>
+        <?php
+        $queue = $mphpd->queue()->get();
+        foreach ($queue as $queue_song) {
+            foreach ($queue_song as $song) {
+                echo $song;
+            }
+        }
+        ?>
     </div>
 
     <?php
