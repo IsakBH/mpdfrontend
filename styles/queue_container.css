@@ -24,9 +24,23 @@
             background: #353535;
             cursor: pointer;
         }
+        &:active {
+            background-color: #1D1D1D;
+        }
     }
 }
 
 .queue-song-title {
     font-weight: bold;
+}
+
+.queue-song-artist {
+    color: #ffffffb3;
+}
+
+.queue-song-play-button {
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    color: black;
 }
