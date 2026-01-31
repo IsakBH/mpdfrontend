@@ -94,9 +94,13 @@ $status = $mphpd->status();
             $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
 
             echo "<li> <div class=\"queue-song\" onclick=\"play_song(({$id})\">
-                <img class=\"albumart\" src=\"$albumart_url\" alt=\"Album art\">
-                <span class='queue-song-title'>{$title}</span> <br>
-                <span class='queue-song-artist'>{$artist}</span>
+                <div class=\"queue-song-data\">
+                    <img class=\"albumart\" id=\"queuealbumart\" src=\"$albumart_url\" alt=\"Album art\">
+                    <div class=\"queue-song-information\">
+                        <span class='queue-song-title'>{$title}</span> <br>
+                        <span class='queue-song-artist'>{$artist}</span>
+                    </div>
+                </div>
             </div>
             <div class=\"song-actions\">
                 <button class=\"queue-song-play-button\" onclick=\"play_song({$id})\" title=\"Play song\">
