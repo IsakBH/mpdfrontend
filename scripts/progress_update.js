@@ -52,3 +52,7 @@ progress_container.addEventListener('mousemove', function (e) {
 progress_container.addEventListener('mouseup', function (e) {
     is_dragging = false;
 })
+
+progress_container.addEventListener('mouseout', function (e) {
+    is_dragging = false;
+})
