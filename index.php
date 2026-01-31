@@ -79,7 +79,18 @@ $status = $mphpd->status();
         <?php
         $queue = $mphpd->queue()->get();
         foreach ($queue as $queue_song) {
-            echo $queue_song['title'] . "<br>" . $queue_song['artist'] . "<br> <br>";
+            $id = $queue_song['id'];
+            $title = $queue_song['title'];
+            $artist = $queue_song['artist'];
+            echo "<li> <div class=\"queue-song\" onclick=\"play_song(({$id})\">
+                <span class='queue-song-title'>{$title}</span> <br>
+                <span class='queue-song-artist'>{$artist}</span>
+            </div>
+            <div class=\"song-actions\">
+                <button class=\"play-button\" onclick=\"play_song({$id})\" title=\"Play song\">
+                    <i class=\"fa-solid fa-play\"></i>
+                </button>
+            </div> </li>";
         }
         ?>
     </div>
