@@ -33,7 +33,7 @@ async function skip_to_percentage(percentage) {
         .then(data => console.log("Heisann! Ts er det serveren sier: " + data));
 };
 
-progress_container.addEventListener('click', function (e) {
+progress_container.addEventListener('mousedown', function (e) {
     const percentage = Math.floor((e.offsetX / progress_container.offsetWidth) * 100);
     console.log(percentage);
     skip_to_percentage(percentage);
