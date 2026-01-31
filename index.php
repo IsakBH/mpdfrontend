@@ -36,6 +36,8 @@ $status = $mphpd->status();
 
 <body>
     <div id="main-container">
+        <button id="settings-button"><i class="fa-solid fa-sliders"></i></button>
+
         <div id="player-interact-container">
             <?php
             $current_song = $mphpd->player()->current_song();

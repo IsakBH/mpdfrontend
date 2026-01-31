@@ -135,3 +135,13 @@ button {
     align-items: center;
     display: flex;
 }
+
+#settings-button {
+    font-size: 1.4rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    background: none;
+    border: none;
+}
