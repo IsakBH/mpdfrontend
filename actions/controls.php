@@ -54,7 +54,7 @@ if($_GET['action'] === 'volumeup'){
     $volume = $mphpd->player()->volume();
     $volume += 5;
     $mphpd->player()->volume($volume);
-    echo "Volum er skrudd ned med 5%. Volum er nå $volume.";
+    echo "Volum er skrudd opp med 5%. Volum er nå $volume.";
 }
 
 if($_GET['action'] === "repeat"){
@@ -63,4 +63,9 @@ if($_GET['action'] === "repeat"){
     $mphpd->player()->repeat($new_repeat_status);
 }
 
-// seeking i sanger fungerer nå!
+// plays a song in the specified position in the queue (called from queue_controls -> play_song())
+if($_GET['action'] === "playsong"){
+    $song_id = htmlspecialchars($_GET['id']);
+    $song_info = $mphpd->queue()->get_id($song_id);
+    $mphpd->player()->play($song_info['pos']);
+}

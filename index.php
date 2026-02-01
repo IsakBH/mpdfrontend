@@ -83,6 +83,7 @@ $status = $mphpd->status();
         foreach ($queue as $queue_song) {
             // info about the songs
             $uri = $queue_song['file'];
+            $id = $queue_song['id'];
             $title = $queue_song['title'];
             $artist = $queue_song['artist'];
             $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
@@ -127,6 +128,7 @@ $status = $mphpd->status();
     <script src='scripts/keyboard_shortcuts.js'></script>
     <script src='scripts/progress_update.js'></script>
     <script type='module' src='scripts/fetch_colors.js'></script>
+    <script src='scripts/queue_controls.js'></script>
 </body>
 
 </html>
