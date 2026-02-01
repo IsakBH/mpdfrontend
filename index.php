@@ -85,16 +85,9 @@ $status = $mphpd->status();
             $uri = $queue_song['file'];
             $title = $queue_song['title'];
             $artist = $queue_song['artist'];
-            /*$binaryart = $mphpd->db()->read_picture($uri);
-            if ($binaryart) {
-                $base64 = base64_encode($binaryart);
-                $albumart = "<img class=\"albumart\" src=\"data:image/jpeg;base64,$base64\" alt=\"Album Art\" />";
-            } else {
-                $albumart = '<img src="assets/placeholder.png" <br>';
-                }*/
-
             $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
 
+            // puts every song in a <li> inside a div so they can be controlled and viewed :D
             echo "<li> <div class=\"queue-song\" onclick=\"play_song({$id})\">
                 <div class=\"queue-song-data\">
                     <img class=\"albumart\" id=\"queuealbumart\" src=\"$albumart_url\" alt=\"Album art\">
@@ -109,12 +102,12 @@ $status = $mphpd->status();
                     <i class=\"fa-solid fa-play\"></i>
                 </button>
             </div> </li>";
-            //print_r(array_keys($queue_song));
         }
         ?>
     </div>
 
     <?php
+    // dev debugging stuff - to be removed in final build
     echo $status["state"], "<br> <br>";
 
     foreach ($current_song as $song) {
@@ -125,9 +118,9 @@ $status = $mphpd->status();
         echo $detsomskjer;
     }
     echo "<br> <br>";
-    print_r(array_keys($current_song));
+    print_r(array_keys($current_song)); // prints out all the array keys in $current_song, since it isn't shown in any of the MphpD documentation
     echo "<br>";
-    print_r(array_keys($status));
+    print_r(array_keys($status)); // prints out all the array keys in $status, since it isn't shown in any of the MphpD documentation
     echo "<br>", $status['elapsed'];
     ?>
     <script src='scripts/player_controls.js'></script>
