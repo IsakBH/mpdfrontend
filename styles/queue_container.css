@@ -20,6 +20,7 @@
         border-radius: 8px;
         box-shadow: 0 0px 5px rgba(0, 0, 0, 0.1);
         width: 100%;
+        user-select: none;
         &:hover {
             background: #353535;
             cursor: pointer;
