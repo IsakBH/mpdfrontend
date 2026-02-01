@@ -2,6 +2,7 @@ import ColorThief from "../node_modules/colorthief/dist/color-thief.mjs";
 
 const colorThief = new ColorThief();
 const playeralbumart = document.getElementById("playeralbumart");
+const queue_selector_container = document.getElementById("queue-selector-container");
 
 const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
   const hex = x.toString(16)
@@ -29,6 +30,9 @@ function applyColor(color) {
     console.log(`Applying colours to the progress bar. Colour: ${color}`);
     progress_bar.style.background = `linear-gradient(to right, ${color}cc, ${color}ff)`;
     progress_bar.style.boxShadow = `0 0 15px 2px ${color}CC`
+
+    console.log(`Applying colours to #queue-selector-container. Colour: ${color}`);
+    queue_selector_container.style.scrollbarColor = `${color} transparent`;
 }
 
 let albumart_color = getColor(playeralbumart);
