@@ -4,6 +4,7 @@
 # Screenshots
 <img width="358" height="470" alt="image" src="https://github.com/user-attachments/assets/84add0b0-ea70-4067-9f59-e8b869189f87" />
 <img width="358" height="470" alt="image" src="https://github.com/user-attachments/assets/645c7ee5-1e00-4814-9c95-76e6e1d5023a" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/d0b3df33-eee6-4304-8219-48db0eae3b69" />
 
 ## Dependencies/Prerequisites
 * A webserver with PHP support enabled (like Apache or Nginx)
