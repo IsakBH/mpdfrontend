@@ -55,7 +55,7 @@ $status = $mphpd->status();
                 $base64 = base64_encode($binaryart);
                 echo "<img class=\"albumart\" id=\"playeralbumart\" src=\"data:image/jpeg;base64,$base64\" alt=\"Album Art\" />";
             } else {
-                echo '<img src="assets/placeholder.png" <br>';
+                echo '<img class="albumart" id="playeralbumart" src="assets/placeholder.png" <br>';
             }
             ?>
             <div id="song-information">
