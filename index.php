@@ -45,6 +45,8 @@ $status = $mphpd->status();
             if ($current_song) {
                 $uri = $current_song['file'];
                 $current_song_album = $current_song['album'] ?? "Unknown album";
+                $current_song_artist = $current_song['artist'] ?? "Unknown artist";
+                $current_song_name = $current_song['title'] ?? "Unknown title";
             } else {
                 echo "It seems you're not playing anything.";
             }
@@ -57,8 +59,8 @@ $status = $mphpd->status();
             }
             ?>
             <div id="song-information">
-                <p id="song-title"><?php echo $current_song['title']; ?></p>
-                <p id="song-artist"><?php echo $current_song['artist'] . " ––– " . $current_song_album ?></p>
+                <p id="song-title"><?php echo $current_song_name; ?></p>
+                <p id="song-artist"><?php echo "$current_song_artist ––– $current_song_album" ?></p>
             </div>
             <div class="progress-container">
                 <div id="progress-bar"></div>
