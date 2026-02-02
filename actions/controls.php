@@ -68,4 +68,5 @@ if($_GET['action'] === "playsong"){
     $song_id = htmlspecialchars($_GET['id']);
     $song_info = $mphpd->queue()->get_id($song_id);
     $mphpd->player()->play($song_info['pos']);
+    echo "Now playing song with queue position {$song_info['pos']}";
 }

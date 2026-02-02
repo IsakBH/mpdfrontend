@@ -31,6 +31,10 @@
     }
 }
 
+.active-song {
+    background-color: #1D1D1D;
+}
+
 .queue-song-title {
     font-weight: bold;
 }
