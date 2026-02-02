@@ -19,6 +19,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/progress_bar.css">
     <link rel="stylesheet" href="styles/album_art.css">
     <link rel="stylesheet" href="styles/queue_container.css">
+    <link rel="stylesheet" href="styles/settings_menu.css">
 
     <!-- Fonter og ikoner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,6 +106,21 @@ $status = $mphpd->status();
             </div> </li>";
         }
         ?>
+
+    <!--Settings popup-->
+    <dialog id="settings-dialog">
+        <h2>Settings</h2>
+        <div id="settings">
+            <div class="settings-toggles" id="transparency-setting">
+                <p><b>Enable transparency</b><i>This enables transparency in the settings menu and in other places</i></p>
+                <label class="switch">
+                    <input id="transparency-toggle" type="checkbox" onclick="toggleTransparency()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </dialog>
+
     </div>
 
     <?php
@@ -129,6 +145,7 @@ $status = $mphpd->status();
     <script src='scripts/progress_update.js'></script>
     <script type='module' src='scripts/fetch_colors.js'></script>
     <script src='scripts/queue_controls.js'></script>
+    <script src='scripts/settings_dialog.js'></script>
 </body>
 
 </html>
