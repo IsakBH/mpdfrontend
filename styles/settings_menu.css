@@ -1,7 +1,7 @@
 /*The dialog itself*/
 dialog {
     margin: auto;
-    border-radius: 10px;
+    border-radius: 20px;
     border: none;
     filter: drop-shadow(0 0 15px black);
     padding: 30px;
@@ -80,7 +80,7 @@ dialog button {
 }
 
 input:checked + .slider {
-    background-color: #8ac8ff;
+    background-color: #000000;
 }
 
 input:checked + .slider:before {
@@ -91,7 +91,7 @@ input:checked + .slider:before {
 }
 
 .slider.round {
-    border-radius: 34px;
+    border-radius: 20px;
     filter: drop-shadow(0px 0px black);
 }
 
