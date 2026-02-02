@@ -114,7 +114,7 @@ $status = $mphpd->status();
             <div class="settings-toggles" id="transparency-setting">
                 <p><b>Enable transparency</b><i>This enables transparency in the settings menu and in other places</i></p>
                 <label class="switch">
-                    <input id="transparency-toggle" type="checkbox" onclick="toggleTransparency()">
+                    <input id="transparency-toggle" type="checkbox" onclick="toggle_transparency()">
                     <span class="slider round"></span>
                 </label>
             </div>
@@ -146,6 +146,7 @@ $status = $mphpd->status();
     <script type='module' src='scripts/fetch_colors.js'></script>
     <script src='scripts/queue_controls.js'></script>
     <script src='scripts/settings_dialog.js'></script>
+    <script src='scripts/apply_settings.js'></script>
 </body>
 
 </html>
