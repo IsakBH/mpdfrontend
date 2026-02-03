@@ -80,6 +80,10 @@ $status = $mphpd->status();
         </div>
     </div>
 
+    <div id="playlist-selector-container">
+        <p>hei</p>
+    </div>
+
     <div id="queue-selector-container">
         <?php
         $queue = $mphpd->queue()->get();
