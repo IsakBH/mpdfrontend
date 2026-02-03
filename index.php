@@ -65,7 +65,10 @@ $status = $mphpd->status();
             <div class="progress-container">
                 <div id="progress-bar"></div>
             </div>
-            <div id="time-display">0:00 / 0:00</div>
+            <div id="time-display">
+                <p id="elapsed-display">0:00</p>
+                <p id="duration-display">0:00</p>
+            </div>
             <br>
 
             <div id="player-button-div">

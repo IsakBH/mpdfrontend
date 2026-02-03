@@ -1,6 +1,8 @@
 const progress_bar = document.getElementById('progress-bar');
 const progress_container = document.querySelector('.progress-container');
 const time_display = document.getElementById('time-display');
+const elapsed_display = document.getElementById('elapsed-display');
+const duration_display = document.getElementById('duration-display');
 let is_dragging = false;
 
 async function update_progress_bar(percentage) {
@@ -8,13 +10,17 @@ async function update_progress_bar(percentage) {
         progress_bar.style.width = percentage + '%';
         const response = await fetch('actions/song_status.php');
         const data = await response.json();
-        time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`
+        // time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`
+        elapsed_display.innerText = `${format_time(data.elapsed)}`;
+        duration_display.innerText = `${format_time(data.duration)}`;
     } else {
         const response = await fetch('actions/song_status.php');
         const data = await response.json();
         //console.log(`${format_time(data.elapsed)} / ${format_time(data.duration)}`);
         progress_bar.style.width = data.percent + '%';
-        time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`;
+        // time_display.innerText = `${format_time(data.elapsed)} / ${format_time(data.duration)}`;
+        elapsed_display.innerText = `${format_time(data.elapsed)}`;
+        duration_display.innerText = `${format_time(data.duration)}`;
     }
 }
 

@@ -145,3 +145,15 @@ button {
     background: none;
     border: none;
 }
+
+#time-display {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+#elapsed-display, #duration-display {
+    margin: 5px;
+    padding: 0;
+}
