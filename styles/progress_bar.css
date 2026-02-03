@@ -10,7 +10,7 @@
     position: relative;
     &:hover {
         cursor: pointer;
-        /*height: 20px; POSSIBLY ADD AS A SETTING*/
+        height: 20px;
         border-radius: 10px;
         #progress-bar {
             border-radius: 10px;
