@@ -1,0 +1,5 @@
+.transparent {
+    #settings_dialog {
+        background-color: rgba(0, 0, 0, 0.80);
+    }
+}
