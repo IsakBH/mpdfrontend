@@ -13,6 +13,7 @@ const skipbackwardsbutton = document.getElementById('skip-backwards-button');
 const skipforwardsbutton = document.getElementById('skip-forwards-button');
 const playeralbumart = document.getElementById('playeralbumart');
 const repeatbutton = document.getElementById('repeat-button');
+const volumedisplay = document.getElementById('volume-display');
 
 // pausing the current song via clicking the pause button
 pausebutton.addEventListener('click', () => {

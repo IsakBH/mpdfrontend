@@ -47,6 +47,7 @@ $status = $mphpd->status();
                 $current_song_album = $current_song['album'] ?? "Unknown album";
                 $current_song_artist = $current_song['artist'] ?? "Unknown artist";
                 $current_song_name = $current_song['title'] ?? "Unknown title";
+                $volume = $current_song['volume'];
             } else {
                 echo "It seems you're not playing anything.";
             }
@@ -74,7 +75,7 @@ $status = $mphpd->status();
                 <button id="pause-button"><?php echo $status['state'] === "play" ? "<i class=\"fa-solid fa-pause\">" : "<i class=\"fa-solid fa-play\">"; ?></i></button>
                 <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                 <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
-                <p id="volume-display">67%</p>
+                <p id="volume-display"><?php echo $status['volume']; ?></p>
                 <button id="volume-button"><i class="fa-solid fa-volume-high"></i></button>
                 <button id="repeat-button"><?php echo $status['repeat'] === 1 ? "<i class=\"fa-solid fa-repeat\"></i>" : "<i class=\"fa-solid fa-arrows-turn-right\"></i>"; ?></button>
             </div>

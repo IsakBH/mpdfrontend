@@ -19,6 +19,7 @@ window.onkeydown = function (e) {
         fetch("actions/controls.php?action=volumedown")
             .then(response => response.text())
             .then(data => {
+                volumedisplay.innerHTML = `${data}`
                 console.log("Heisann! Ts er det serveren sier: Volum er skrudd ned med 5%. Volum er nå " + data)
             })
     }
@@ -29,6 +30,7 @@ window.onkeydown = function (e) {
         fetch("actions/controls.php?action=volumeup")
             .then(response => response.text())
             .then(data => {
+                volumedisplay.innerHTML = `${data}`
                 console.log("Heisann! Ts er det serveren sier: Volum er skrudd opp med 5%. Volum er nå " + data)
             })
     }
