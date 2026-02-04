@@ -1,3 +1,5 @@
+window.onload = apply_transparency();
+
 function apply_transparency() {
     const istransparent = localStorage.getItem('transparent') === 'true';
     if (istransparent) {
