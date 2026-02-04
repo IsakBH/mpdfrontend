@@ -113,7 +113,7 @@ $status = $mphpd->status();
     <dialog id="settings-dialog">
         <h2>Settings</h2>
         <div id="settings">
-            <button id="close-settings-button"><i class="fa-regular fa-circle-xmark"></i></button>
+            <button id="close-settings-button" onclick="close_settings()"><i class="fa-regular fa-circle-xmark"></i></button>
             <div class="settings-toggles" id="transparency-setting">
                 <p><b>Enable transparency</b><i>This enables transparency in the settings menu and in other places</i></p>
                 <label class="switch">
