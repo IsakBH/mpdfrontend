@@ -82,6 +82,9 @@ dialog button {
     background-color: #353535;
     -webkit-transition: 0.1s;
     transition: 0.1s;
+    &:hover {
+        background-color: #434343;
+    }
 }
 
 .slider:before {
