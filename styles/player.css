@@ -145,3 +145,11 @@ button {
     background: none;
     border: none;
 }
+
+#settings-close-button {
+    posiion: fixed;
+    top: 0;
+    right: 0;
+    color: #fafafa;
+    margin: 10px;
+}
