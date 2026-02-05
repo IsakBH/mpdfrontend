@@ -17,16 +17,20 @@ window.onkeydown = function (e) {
     if (e.key === "ArrowDown") {
         e.preventDefault();
         fetch("actions/controls.php?action=volumedown")
-            .then(response => response.text())
-            .then(data => console.log("Heisann! Ts er det serveren sier: " + data))
+            .then((response) => response.text())
+            .then((data) =>
+                console.log("Heisann! Ts er det serveren sier: " + data),
+            );
     }
 
     // volume up
     if (e.key === "ArrowUp") {
         e.preventDefault();
         fetch("actions/controls.php?action=volumeup")
-            .then(response => response.text())
-            .then(data => console.log("Heisann! Ts er det serveren sier: " + data))
+            .then((response) => response.text())
+            .then((data) =>
+                console.log("Heisann! Ts er det serveren sier: " + data),
+            );
     }
 
     // going to the previous song
@@ -111,4 +115,12 @@ window.onkeydown = function (e) {
         update_progress_bar();
     }
 
-}
+    if (e.key === ",") {
+        e.preventDefault();
+        if (settings_dialog.open) {
+            close_settings_button.click();
+        } else {
+            settings_button.click();
+        }
+    }
+};
