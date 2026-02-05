@@ -29,7 +29,9 @@ function applyColor(color) {
     r.style.setProperty('--gradient-color-1', `${color}cc`); // 80% opacity
     r.style.setProperty('--gradient-color-2', `${color}ff`); // 100% opacity
     r.style.setProperty('--primary-hover-color', `${color}66`);
-    r.style.setProperty('--secondary-hover-color', `${color}33`)
+    r.style.setProperty('--secondary-hover-color', `${color}33`);
+    r.style.setProperty('--hover-transparent-50', `${color}80`);
+    r.style.setProperty('--hover-transparent-30', `${color}4d`);
 }
 
 let albumart_color = getColor(playeralbumart);
