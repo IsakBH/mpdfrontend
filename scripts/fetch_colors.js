@@ -3,6 +3,7 @@ import ColorThief from "../node_modules/colorthief/dist/color-thief.mjs";
 const colorThief = new ColorThief();
 const playeralbumart = document.getElementById("playeralbumart");
 const queue_selector_container = document.getElementById("queue-selector-container");
+var r = document.querySelector(':root'); // :root in the stylesheet
 
 const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
   const hex = x.toString(16)
@@ -25,7 +26,7 @@ function getColor(image) {
 
 function applyColor(color) {
     console.log(`Applying colours to #playeralbumart. Colour: ${color}`);
-    playeralbumart.style.boxShadow = `0px 0px 40px ${color}`;
+    r.style.setProperty('--primary-albumart-color', `${color}`);
 
     console.log(`Applying colours to the progress bar. Colour: ${color}`);
     progress_bar.style.background = `linear-gradient(to right, ${color}cc, ${color}ff)`;

@@ -21,6 +21,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/queue_container.css">
     <link rel="stylesheet" href="styles/settings_menu.css">
     <link rel="stylesheet" href="styles/transparent_mode.css">
+    <link rel="stylesheet" href="styles/variables.css">
 
     <!-- Fonter og ikoner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
