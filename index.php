@@ -22,6 +22,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/settings_menu.css">
     <link rel="stylesheet" href="styles/transparent_mode.css">
     <link rel="stylesheet" href="styles/variables.css">
+    <link rel="stylesheet" href="styles/mobile_friendliness.css">
 
     <!-- Fonter og ikoner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
