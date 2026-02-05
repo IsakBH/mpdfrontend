@@ -23,11 +23,11 @@
         width: 100%;
         user-select: none;
         &:hover {
-            background: #353535;
+            background: var(--primary-hover-color);
             cursor: pointer;
         }
         &:active {
-            background-color: #1D1D1D;
+            background-color: var(--secondary-hover-color);
         }
     }
 }
