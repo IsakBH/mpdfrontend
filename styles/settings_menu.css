@@ -15,7 +15,7 @@ dialog {
 
 /*Dims the background and stuff so the focus is on settings yk*/
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(67, 67, 67, 0.4);
 }
 
 /*Buttons in the dialog*/
