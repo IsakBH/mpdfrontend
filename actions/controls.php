@@ -47,14 +47,14 @@ if($_GET['action'] === 'volumedown'){
     $volume = $mphpd->player()->volume();
     $volume -= 5;
     $mphpd->player()->volume($volume);
-    echo "Volum er skrudd ned med 5%. Volum er nå $volume.";
+    echo $volume;
 }
 
 if($_GET['action'] === 'volumeup'){
     $volume = $mphpd->player()->volume();
     $volume += 5;
     $mphpd->player()->volume($volume);
-    echo "Volum er skrudd opp med 5%. Volum er nå $volume.";
+    echo $volume;
 }
 
 if($_GET['action'] === "repeat"){

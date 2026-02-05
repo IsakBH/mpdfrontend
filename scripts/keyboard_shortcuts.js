@@ -17,20 +17,22 @@ window.onkeydown = function (e) {
     if (e.key === "ArrowDown") {
         e.preventDefault();
         fetch("actions/controls.php?action=volumedown")
-            .then((response) => response.text())
-            .then((data) =>
-                console.log("Heisann! Ts er det serveren sier: " + data),
-            );
+            .then(response => response.text())
+            .then(data => {
+                volumedisplay.innerHTML = `${data}%`
+                console.log("Heisann! Ts er det serveren sier: Volum er skrudd ned med 5%. Volum er nå " + data)
+            })
     }
 
     // volume up
     if (e.key === "ArrowUp") {
         e.preventDefault();
         fetch("actions/controls.php?action=volumeup")
-            .then((response) => response.text())
-            .then((data) =>
-                console.log("Heisann! Ts er det serveren sier: " + data),
-            );
+            .then(response => response.text())
+            .then(data => {
+                volumedisplay.innerHTML = `${data}%`
+                console.log("Heisann! Ts er det serveren sier: Volum er skrudd opp med 5%. Volum er nå " + data)
+            })
     }
 
     // going to the previous song

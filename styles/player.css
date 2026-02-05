@@ -125,6 +125,15 @@ button {
     float: right;
 }
 
+#volume-display {
+    font-size: 1rem;
+    float: right;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
 #repeat-button {
     font-size: 1.2rem;
     float: left;
