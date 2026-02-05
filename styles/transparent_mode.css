@@ -1,0 +1,13 @@
+.transparent {
+    #settings-dialog {
+        background-color: rgba(0, 0, 0, 0.80) !important;
+    }
+
+    input:checked + .slider {
+        background-color: rgba(67, 67, 67, 0.80) !important;
+    }
+
+    #close-settings-button {
+        background-color: rgba(67, 67, 67, 0.80) !important;
+    }
+}

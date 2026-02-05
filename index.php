@@ -20,6 +20,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/album_art.css">
     <link rel="stylesheet" href="styles/queue_container.css">
     <link rel="stylesheet" href="styles/settings_menu.css">
+    <link rel="stylesheet" href="styles/transparent_mode.css">
 
     <!-- Fonter og ikoner -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -114,6 +115,7 @@ $status = $mphpd->status();
     <dialog id="settings-dialog">
         <h2>Settings</h2>
         <div id="settings">
+            <button id="close-settings-button" onclick="close_settings()"><i class="fa-regular fa-circle-xmark"></i></button>
             <div class="settings-toggles" id="transparency-setting">
                 <p><b>Enable transparency</b><i>This enables transparency in the settings menu and in other places</i></p>
                 <label class="switch">

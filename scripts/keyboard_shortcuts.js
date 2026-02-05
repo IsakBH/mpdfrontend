@@ -117,4 +117,12 @@ window.onkeydown = function (e) {
         update_progress_bar();
     }
 
-}
+    if (e.key === ",") {
+        e.preventDefault();
+        if (settings_dialog.open) {
+            close_settings_button.click();
+        } else {
+            settings_button.click();
+        }
+    }
+};
