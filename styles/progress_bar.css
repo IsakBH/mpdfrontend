@@ -21,7 +21,8 @@
 /*The progress bar (the one with colour that's actually moving and shit)*/
 #progress-bar {
      width: 0%;
-     background: #FFFFFF;
+     background: linear-gradient(to right, var(--gradient-color-1), var(--gradient-color-2));
+     box-shadow: 0 0 15px 2px var(--primary-albumart-color);
      border-radius: 2px;
      transition: box-shadow 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6);
      transition: width 0.2s cubic-bezier(0.68, -0.6, 0.32, 1.6);

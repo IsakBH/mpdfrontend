@@ -25,12 +25,9 @@ function getColor(image) {
 }
 
 function applyColor(color) {
-    console.log(`Applying colours to #playeralbumart. Colour: ${color}`);
     r.style.setProperty('--primary-albumart-color', `${color}`);
-
-    console.log(`Applying colours to the progress bar. Colour: ${color}`);
-    progress_bar.style.background = `linear-gradient(to right, ${color}cc, ${color}ff)`;
-    progress_bar.style.boxShadow = `0 0 15px 2px ${color}CC`
+    r.style.setProperty('--gradient-color-1', `${color}cc`); // 80% opacity
+    r.style.setProperty('--gradient-color-2', `${color}ff`); // 100% opacity
 
     console.log(`Applying colours to #queue-selector-container. Colour: ${color}`);
     queue_selector_container.style.scrollbarColor = `${color} transparent`;
