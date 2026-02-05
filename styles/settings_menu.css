@@ -34,12 +34,15 @@ dialog button {
     padding: 10px;
     width: fit-content;
     height: auto;
-    background-color: #353535;
+    background-color: var(--gradient-color-1);
     border-radius: 10px;
     border: none;
     font-size: 1.5rem;
     &:hover {
-        background-color: #434343;
+        background-color: var(--primary-hover-color);
+    }
+    &:active {
+        background-color: var(--secondary-hover-color);
     }
 }
 
@@ -101,7 +104,13 @@ dialog button {
 }
 
 input:checked + .slider {
-    background-color: #000000;
+    background-color: var(--gradient-color-1);
+    &:hover {
+        background-color: var(--primary-hover-color);
+    }
+    &:active {
+        background-color: var(--secondary-hover-color);
+    }
 }
 
 input:checked + .slider:before {

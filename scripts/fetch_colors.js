@@ -3,6 +3,7 @@ import ColorThief from "../node_modules/colorthief/dist/color-thief.mjs";
 const colorThief = new ColorThief();
 const playeralbumart = document.getElementById("playeralbumart");
 const queue_selector_container = document.getElementById("queue-selector-container");
+var r = document.querySelector(':root'); // :root in the stylesheet
 
 const rgbToHex = (r, g, b) => '#' + [r, g, b].map(x => {
   const hex = x.toString(16)
@@ -24,15 +25,13 @@ function getColor(image) {
 }
 
 function applyColor(color) {
-    console.log(`Applying colours to #playeralbumart. Colour: ${color}`);
-    playeralbumart.style.boxShadow = `0px 0px 40px ${color}`;
-
-    console.log(`Applying colours to the progress bar. Colour: ${color}`);
-    progress_bar.style.background = `linear-gradient(to right, ${color}cc, ${color}ff)`;
-    progress_bar.style.boxShadow = `0 0 15px 2px ${color}CC`
-
-    console.log(`Applying colours to #queue-selector-container. Colour: ${color}`);
-    queue_selector_container.style.scrollbarColor = `${color} transparent`;
+    r.style.setProperty('--primary-albumart-color', `${color}`);
+    r.style.setProperty('--gradient-color-1', `${color}cc`); // 80% opacity
+    r.style.setProperty('--gradient-color-2', `${color}ff`); // 100% opacity
+    r.style.setProperty('--primary-hover-color', `${color}66`);
+    r.style.setProperty('--secondary-hover-color', `${color}33`);
+    r.style.setProperty('--hover-transparent-50', `${color}80`);
+    r.style.setProperty('--hover-transparent-30', `${color}4d`);
 }
 
 let albumart_color = getColor(playeralbumart);

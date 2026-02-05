@@ -7,6 +7,7 @@
     background: #000000;
     padding: 50px 30px;
     border-radius: 20px;
+    scrollbar-color: var(--primary-albumart-color) transparent;
     filter: drop-shadow(0px 0px 15px #000000);
     margin-left: 5px;
     overflow: overlay;
@@ -22,11 +23,11 @@
         width: 100%;
         user-select: none;
         &:hover {
-            background: #353535;
+            background: var(--primary-hover-color);
             cursor: pointer;
         }
         &:active {
-            background-color: #1D1D1D;
+            background-color: var(--secondary-hover-color);
         }
     }
 }
