@@ -28,9 +28,6 @@ function applyColor(color) {
     r.style.setProperty('--primary-albumart-color', `${color}`);
     r.style.setProperty('--gradient-color-1', `${color}cc`); // 80% opacity
     r.style.setProperty('--gradient-color-2', `${color}ff`); // 100% opacity
-
-    console.log(`Applying colours to #queue-selector-container. Colour: ${color}`);
-    queue_selector_container.style.scrollbarColor = `${color} transparent`;
 }
 
 let albumart_color = getColor(playeralbumart);
