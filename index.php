@@ -19,6 +19,7 @@ $status = $mphpd->status();
     <link rel="stylesheet" href="styles/progress_bar.css">
     <link rel="stylesheet" href="styles/album_art.css">
     <link rel="stylesheet" href="styles/queue_container.css">
+    <link rel="stylesheet" href="styles/playlist_container.css">
     <link rel="stylesheet" href="styles/settings_menu.css">
     <link rel="stylesheet" href="styles/transparent_mode.css">
     <link rel="stylesheet" href="styles/variables.css">
@@ -112,6 +113,11 @@ $status = $mphpd->status();
             </div> </li>";
         }
         ?>
+    </div>
+
+    <div id="playlist-selector-container">
+        hei
+    </div>
 
     <!--Settings popup-->
     <dialog id="settings-dialog">
@@ -127,8 +133,6 @@ $status = $mphpd->status();
             </div>
         </div>
     </dialog>
-
-    </div>
 
     <?php
     // dev debugging stuff - to be removed in final build
