@@ -26,4 +26,12 @@
             filter: brightness(60%);
         }
     }
+
+    #player-interact-container {
+        width: 100%;
+    }
+
+    #main-container {
+        width: 100%;
+    }
 }
