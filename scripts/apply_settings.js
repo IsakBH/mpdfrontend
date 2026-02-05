@@ -1,11 +1,9 @@
-window.onload = apply_transparency();
-
+window.addEventListener('load', apply_transparency);
 function apply_transparency() {
     const istransparent = localStorage.getItem('transparent') === 'true';
-    if (istransparent) {
-        document.body.classList.add('transparent');
-        console.log("transparent mode is enabled");
-    }
+
+    document.body.classList.toggle('transparent', istransparent);
+
     const toggleButton = document.getElementById('transparency-toggle');
     if (toggleButton) {
         toggleButton.checked = istransparent;
