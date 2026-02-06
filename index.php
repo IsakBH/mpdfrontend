@@ -86,6 +86,7 @@ $status = $mphpd->status();
     </div>
 
     <div id="queue-selector-container">
+        <h1 id="queue-header">Queue</h1>
         <?php
         $queue = $mphpd->queue()->get();
         foreach ($queue as $queue_song) {
