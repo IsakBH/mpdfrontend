@@ -79,7 +79,7 @@ $status = $mphpd->status();
                 <button id="pause-button"><?php echo $status['state'] === "play" ? "<i class=\"fa-solid fa-pause\">" : "<i class=\"fa-solid fa-play\">"; ?></i></button>
                 <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                 <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
-                <button id="volume-button"><i class="fa-solid fa-volume-high"></i><p id="volume-display"><?php echo "{$status['volume']}%"; ?></p></button>
+                <button id="volume-button"><p id="volume-display"><?php echo "{$status['volume']}%"; ?></p><i class="fa-solid fa-volume-high"></i></button>
                 <button id="repeat-button"><?php echo $status['repeat'] === 1 ? "<i class=\"fa-solid fa-repeat\"></i>" : "<i class=\"fa-solid fa-arrows-turn-right\"></i>"; ?></button>
             </div>
         </div>
@@ -116,7 +116,24 @@ $status = $mphpd->status();
     </div>
 
     <div id="playlist-selector-container">
-        hei
+        <?php
+        $playlists = $mphpd->playlists();
+        foreach($playlists as $playlist_name){
+            echo "
+            <li>
+            <div class=\"playlist\" onclick=\"play_playlist({$playlist_name})\">
+                <div class=\"playlist-data\">
+                    <img class=\"albumart\" id=\"queuealbumart\" src=\"./assets/placeholder.png\" alt=\"playlist\">
+                    <div class=\"queue-song-information\">
+                        <span class='queue-song-title'>{$playlist_name}</span> <br>
+                        <span class='queue-song-artist'>Cool playlist</span>
+                    </div>
+                </div>
+            </div>
+            </li>
+            ";
+        }
+        ?>
     </div>
 
     <!--Settings popup-->
