@@ -42,6 +42,7 @@ yt-dlp 'link to cool music on youtube' \
 --exec-before-download "ffmpeg -i %(thumbnails.-1.filepath)q -vf crop='ih:ih' _%(thumbnails.-1.filepath)q && mv _%(thumbnails.-1.filepath)q %(thumbnails.-1.filepath)q" \
 --output "%(artist)s - %(title)s.%(ext)s"
 ```
+##### [Create a bash script to make it easier to run!](https://github.com/IsakBH/Scripts/blob/main/ytdlp.sh)
 
 ## How to get synced lyrics from your songs
 This command uses a python program called [syncedlyrics](https://pypi.org/project/syncedlyrics/).
