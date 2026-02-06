@@ -86,7 +86,7 @@ $status = $mphpd->status();
     </div>
 
     <div id="queue-selector-container">
-        <h1 id="queue-header">Queue</h1>
+        <h1 class="header">Queue</h1>
         <?php
         $queue = $mphpd->queue()->get();
         foreach ($queue as $queue_song) {
@@ -117,6 +117,7 @@ $status = $mphpd->status();
     </div>
 
     <div id="playlist-selector-container">
+        <h1 class="header">Playlists</h1>
         <?php
         $playlists = $mphpd->playlists();
         foreach($playlists as $playlist_name){
