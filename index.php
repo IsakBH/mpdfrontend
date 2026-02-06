@@ -79,7 +79,9 @@ $status = $mphpd->status();
                 <button id="pause-button"><?php echo $status['state'] === "play" ? "<i class=\"fa-solid fa-pause\">" : "<i class=\"fa-solid fa-play\">"; ?></i></button>
                 <button id="skip-forwards-button"><i class="fa-solid fa-arrow-rotate-right"></i></button>
                 <button id="next-button"><i class="fa-solid fa-forward-step"></i></button>
-                <button id="volume-button"><p id="volume-display"><?php echo "{$status['volume']}%"; ?></p><i class="fa-solid fa-volume-high"></i></button>
+                <button id="volume-button">
+                    <p id="volume-display"><?php echo "{$status['volume']}%"; ?></p><i class="fa-solid fa-volume-high"></i>
+                </button>
                 <button id="repeat-button"><?php echo $status['repeat'] === 1 ? "<i class=\"fa-solid fa-repeat\"></i>" : "<i class=\"fa-solid fa-arrows-turn-right\"></i>"; ?></button>
             </div>
         </div>
@@ -87,52 +89,62 @@ $status = $mphpd->status();
 
     <div id="queue-selector-container">
         <h1 class="header">Queue</h1>
-        <?php
-        $queue = $mphpd->queue()->get();
-        foreach ($queue as $queue_song) {
-            // info about the songs
-            $uri = $queue_song['file'];
-            $id = $queue_song['id'];
-            $title = $queue_song['title'];
-            $artist = $queue_song['artist'];
-            $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
+        <div id='queue-song-list'>
+            <?php
+            $queue = $mphpd->queue()->get();
+            foreach ($queue as $queue_song) {
+                // info about the songs
+                $uri = $queue_song['file'];
+                $id = $queue_song['id'];
+                $title = $queue_song['title'];
+                $artist = $queue_song['artist'];
+                $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
 
-            // puts every song in a <li> inside a div so they can be controlled and viewed :D
-            echo "<li> <div class=\"queue-song\" onclick=\"play_song({$id})\">
-                <div class=\"queue-song-data\">
-                    <img class=\"albumart\" id=\"queuealbumart\" src=\"$albumart_url\" alt=\"Album art\">
-                    <div class=\"queue-song-information\">
-                        <span class='queue-song-title'>{$title}</span> <br>
-                        <span class='queue-song-artist'>{$artist}</span>
+                // puts every song in a <li> inside a div so they can be controlled and viewed :D
+                echo "
+
+                <li>
+                <div class=\"queue-song\" onclick=\"play_song({$id})\">
+                    <div class=\"queue-song-data\">
+                        <img class=\"albumart\" id=\"queuealbumart\" src=\"$albumart_url\" alt=\"Album art\">
+                        <div class=\"queue-song-information\">
+                            <span class='queue-song-title'>{$title}</span> <br>
+                            <span class='queue-song-artist'>{$artist}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class=\"song-actions\">
-                <button class=\"queue-song-play-button\" onclick=\"play_song({$id})\" title=\"Play song\">
-                    <i class=\"fa-solid fa-play\"></i>
-                </button>
-            </div> </li>";
-        }
-        ?>
+                <div class=\"song-actions\">
+                    <button class=\"queue-song-play-button\" onclick=\"play_song({$id})\" title=\"Play song\">
+                        <i class=\"fa-solid fa-play\"></i>
+                    </button>
+                </div>
+                </li>
+
+            ";
+            }
+            ?>
+        </div>
     </div>
 
     <div id="playlist-selector-container">
         <h1 class="header">Playlists</h1>
         <?php
         $playlists = $mphpd->playlists();
-        foreach($playlists as $playlist_name){
+        foreach ($playlists as $playlist_name) {
             echo "
-            <li>
-            <div class=\"playlist\" onclick=\"play_playlist('$playlist_name')\">
-                <div class=\"playlist-data\">
-                    <img class=\"albumart\" id=\"queuealbumart\" src=\"./assets/placeholder.png\" alt=\"playlist\">
-                    <div class=\"queue-song-information\">
-                        <span class='queue-song-title'>{$playlist_name}</span> <br>
-                        <span class='queue-song-artist'>Cool playlist</span>
+            <div id='playlist-list'>
+                <li>
+                <div class=\"playlist\" onclick=\"play_playlist('$playlist_name')\">
+                    <div class=\"playlist-data\">
+                        <img class=\"albumart\" id=\"queuealbumart\" src=\"./assets/placeholder.png\" alt=\"playlist\">
+                        <div class=\"queue-song-information\">
+                            <span class='queue-song-title'>{$playlist_name}</span> <br>
+                            <span class='queue-song-artist'>Cool playlist</span>
+                        </div>
                     </div>
                 </div>
+                </li>
             </div>
-            </li>
             ";
         }
         ?>

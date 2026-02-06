@@ -10,7 +10,7 @@
     scrollbar-color: var(--primary-albumart-color) transparent;
     filter: drop-shadow(0px 0px 15px #000000);
     margin-left: 5px;
-    overflow: overlay;
+    /*overflow: overlay;*/
 
     li {
         display: flex;
@@ -64,4 +64,9 @@
 
 .header {
     margin: 0 0 10px 0;
+}
+
+#queue-song-list {
+    overflow: overlay;
+    height: 100%;
 }
