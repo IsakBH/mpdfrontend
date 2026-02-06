@@ -73,5 +73,9 @@ if($_GET['action'] === "playsong"){
 
 if($_GET['action'] === "playplaylist"){
     $playlist_name = htmlspecialchars($_GET['name']);
+    // $playlist_songs = $mphpd->playlist($playlist_name)->get_songs(1);
+    $mphpd->queue()->clear();
+    $mphpd->playlist($playlist_name)->load();
+    $mphpd->player()->play(0);
     echo $playlist_name;
 }
