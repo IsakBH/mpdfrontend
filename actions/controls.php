@@ -70,3 +70,8 @@ if($_GET['action'] === "playsong"){
     $mphpd->player()->play($song_info['pos']);
     echo "Now playing song with queue position {$song_info['pos']}";
 }
+
+if($_GET['action'] === "playplaylist"){
+    $playlist_name = htmlspecialchars($_GET['name']);
+    echo $playlist_name;
+}

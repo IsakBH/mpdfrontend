@@ -121,7 +121,7 @@ $status = $mphpd->status();
         foreach($playlists as $playlist_name){
             echo "
             <li>
-            <div class=\"playlist\" onclick=\"play_playlist({$playlist_name})\">
+            <div class=\"playlist\" onclick=\"play_playlist('$playlist_name')\">
                 <div class=\"playlist-data\">
                     <img class=\"albumart\" id=\"queuealbumart\" src=\"./assets/placeholder.png\" alt=\"playlist\">
                     <div class=\"queue-song-information\">
@@ -175,6 +175,7 @@ $status = $mphpd->status();
     <script src='scripts/queue_controls.js'></script>
     <script src='scripts/settings_dialog.js'></script>
     <script src='scripts/apply_settings.js'></script>
+    <script src='scripts/playlist_controls.js'></script>
 </body>
 
 </html>
