@@ -79,3 +79,9 @@ if($_GET['action'] === "playplaylist"){
     $mphpd->player()->play(0);
     echo $playlist_name;
 }
+
+if($_GET['action'] === "shuffle"){
+    $new_shuffle_status = !$mpd_status['random'];
+    echo $new_shuffle_status;
+    $mphpd->player()->random($new_shuffle_status);
+}
