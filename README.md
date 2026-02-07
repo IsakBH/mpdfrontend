@@ -5,12 +5,17 @@
 The screenshots below are all taken with the default configurations. That's because you configure anything.
 
 * cool dynamic colours based on the album art
-<img width="358" height="470" alt="image" src="https://github.com/user-attachments/assets/84add0b0-ea70-4067-9f59-e8b869189f87" />
-<img width="358" height="470" alt="image" src="https://github.com/user-attachments/assets/645c7ee5-1e00-4814-9c95-76e6e1d5023a" /> <br> <br>
+<img width="340" height="472" alt="image" src="https://github.com/user-attachments/assets/f2b2189a-16ee-4e79-926a-638f5903eb15" />
+<img width="340" height="472" alt="image" src="https://github.com/user-attachments/assets/7591ef9d-e7a5-4b67-9241-d06f3c8273c8" /> <br> <br>
 
 * the full player with the queue song selector and everything
 
-<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/d0b3df33-eee6-4304-8219-48db0eae3b69" />
+<img width="1280" height="720" alt="image" src="https://github.com/user-attachments/assets/e14aa1db-0f08-4b0e-98b7-cd854375ae0e" /> <br> <br>
+
+* settings page
+
+<img width="1094" height="853" alt="image" src="https://github.com/user-attachments/assets/fe3391d4-f8dc-440c-ad57-30d873131bc5" />
+
 
 ## Dependencies/Prerequisites
 * A webserver with PHP support enabled (like Apache or Nginx)
