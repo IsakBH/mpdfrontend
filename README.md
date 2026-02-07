@@ -23,6 +23,11 @@ The screenshots below are all taken with the default configurations. That's beca
 * Preconfigured MPD
   * As of right now, this project connects to `127.0.0.1` at port `6767`. However, you can change this in [this file](connection.php). Support for adding your own server will likely be added in the future.
 
+## Features
+*   **Access to everything:** Easy access to your entire queue and all your playlists (and maybe more to come?)
+*   **Adaptive UI:** Dynamically fetches colours from the current song's album art and uses it across the UI
+*   **Customizable:** Very customizable - you can tweak everything you want (eventually)
+*   **Keyboard shortcuts:** Easily control your player with intuitive keyboard shortcuts
 
 ## Player shortcuts
 | Keyboard shortcut | Action/Description |
