@@ -14,6 +14,7 @@ const skipforwardsbutton = document.getElementById('skip-forwards-button');
 const playeralbumart = document.getElementById('playeralbumart');
 const repeatbutton = document.getElementById('repeat-button');
 const volumedisplay = document.getElementById('volume-display');
+const shufflebutton = document.getElementById('shuffle-button');
 
 // pausing the current song via clicking the pause button
 pausebutton.addEventListener('click', () => {
@@ -91,4 +92,26 @@ repeatbutton.addEventListener('click', () => {
                 repeatbutton.innerHTML = "<i class=\"fa-solid fa-arrows-turn-right\"></i>";
             }
         }));
+});
+
+shufflebutton.addEventListener('click', () => {
+    console.log("ROFLROFLROFLROFLROFLROFLROFLROFLROFL bro har lyst til å skru på shuffle?");
+    fetch('actions/controls.php?action=shuffle')
+        .then(response => response.text())
+        .then(data => {
+            console.log("Heisann! Ts er det serveren sier: " + data);
+            if (data === "1") {
+                shufflebutton.style.backgroundColor = 'var(--primary-albumart-color)'
+            } else {
+                shufflebutton.style.backgroundColor = 'transparent';
+            }
+        })
+})
+
+window.addEventListener("load", () => {
+    if (data === "1") {
+        shufflebutton.style.backgroundColor = 'var(--primary-albumart-color)'
+    } else {
+        shufflebutton.style.backgroundColor = 'transparent';
+    }
 });
