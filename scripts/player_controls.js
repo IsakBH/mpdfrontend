@@ -101,17 +101,9 @@ shufflebutton.addEventListener('click', () => {
         .then(data => {
             console.log("Heisann! Ts er det serveren sier: " + data);
             if (data === "1") {
-                shufflebutton.style.backgroundColor = 'var(--primary-albumart-color)'
+                shufflebutton.innerHTML = "<i class=\"fa-solid fa-shuffle\"></i>";
             } else {
-                shufflebutton.style.backgroundColor = 'transparent';
+                shufflebutton.innerHTML = "<i class=\"fa-solid fa-arrows-rotate\"></i>";
             }
         })
 })
-
-window.addEventListener("load", () => {
-    if (data === "1") {
-        shufflebutton.style.backgroundColor = 'var(--primary-albumart-color)'
-    } else {
-        shufflebutton.style.backgroundColor = 'transparent';
-    }
-});

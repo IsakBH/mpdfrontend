@@ -83,7 +83,8 @@ $status = $mphpd->status();
                     <p id="volume-display"><?php echo "{$status['volume']}%"; ?></p><i class="fa-solid fa-volume-high"></i>
                 </button>
                 <button id="repeat-button"><?php echo $status['repeat'] === 1 ? "<i class=\"fa-solid fa-repeat\"></i>" : "<i class=\"fa-solid fa-arrows-turn-right\"></i>"; ?></button>
-                <button id="shuffle-button"><i class="fa-solid fa-shuffle"></i></button>
+                <button id="shuffle-button"><?php echo $status['random'] === 1 ? "<i class=\"fa-solid fa-shuffle\"></i>" : "<i class=\"fa-solid fa-arrows-rotate\"></i>"; ?></button>
+
             </div>
         </div>
     </div>
