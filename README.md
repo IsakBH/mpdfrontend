@@ -2,7 +2,7 @@
 > This project is mostly made for fun, and it will probably never be very good or secure
 
 # Screenshots
-The screenshots below are all taken with the default configurations. That's because you configure anything.
+The screenshots below are all taken with the default configurations. That's because you can't configure anything.
 
 * cool dynamic colours based on the album art
 <img width="340" height="472" alt="image" src="https://github.com/user-attachments/assets/f2b2189a-16ee-4e79-926a-638f5903eb15" />
