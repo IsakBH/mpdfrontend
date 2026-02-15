@@ -183,6 +183,11 @@ $status = $mphpd->status();
     echo "<br>";
     print_r(array_keys($status)); // prints out all the array keys in $status, since it isn't shown in any of the MphpD documentation
     echo "<br>", $status['elapsed'];
+
+    $stats = $mphpd->stats();
+    print_r(array_keys($stats));
+    echo $stats['playtime'];
+
     ?>
     <script src='scripts/player_controls.js'></script>
     <script src='scripts/keyboard_shortcuts.js'></script>
