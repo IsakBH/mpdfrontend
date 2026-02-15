@@ -7,6 +7,7 @@ if ($binaryart) {
     header("Content-Type: image/jpeg");
     echo $binaryart;
 } else {
-    echo "assets/placeholder.png";
+    header("Content-Type: image/jpeg");
+    readfile("../assets/placeholder.png");
 }
 exit;

@@ -100,7 +100,12 @@ $status = $mphpd->status();
                 $id = $queue_song['id'];
                 $title = $queue_song['title'];
                 $artist = $queue_song['artist'];
-                $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
+                if (!empty($uri)) {
+                    $albumart_url = "scripts/get_album_art.php?file=" . urlencode($uri);
+                } else {
+                    // Direct path to placeholder if no URI is provided
+                    $albumart_url = "assets/placeholder.png";
+                }
 
                 // puts every song in a <li> inside a div so they can be controlled and viewed :D
                 echo "
@@ -108,7 +113,7 @@ $status = $mphpd->status();
                 <li>
                 <div class=\"queue-song\" onclick=\"play_song({$id})\">
                     <div class=\"queue-song-data\">
-                        <img class=\"albumart\" id=\"queuealbumart\" src=\"$albumart_url\" alt=\"Album art\">
+                        <img class=\"albumart\" id=\"queuealbumart\" loading=\"lazy\" src=\"$albumart_url\">
                         <div class=\"queue-song-information\">
                             <span class='queue-song-title'>{$title}</span> <br>
                             <span class='queue-song-artist'>{$artist}</span>
